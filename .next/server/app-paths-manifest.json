@@ -1,8 +1,9 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/login/page": "app/login/page.js",
+  "/customer/home/page": "app/customer/home/page.js",
   "/customer/products/[id]/page": "app/customer/products/[id]/page.js",
-  "/admin/dashboard/page": "app/admin/dashboard/page.js",
-  "/admin/reviews/page": "app/admin/reviews/page.js"
+  "/login/page": "app/login/page.js",
+  "/admin/wishlist/page": "app/admin/wishlist/page.js",
+  "/admin/reviews/page": "app/admin/reviews/page.js",
+  "/admin/products/page": "app/admin/products/page.js",
+  "/admin/products/add/page": "app/admin/products/add/page.js"
 }

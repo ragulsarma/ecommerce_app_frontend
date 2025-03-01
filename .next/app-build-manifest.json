@@ -21,25 +21,45 @@
       "static/chunks/main-app.js",
       "static/chunks/app/customer/home/page.js"
     ],
-    "/customer/products/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/customer/products/[id]/page.js"
-    ],
     "/admin/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/dashboard/page.js"
+    ],
+    "/admin/wishlist/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/wishlist/page.js"
+    ],
+    "/admin/products/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/products/page.js"
+    ],
+    "/customer/wishlist/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/customer/wishlist/page.js"
     ],
     "/admin/reviews/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/reviews/page.js"
     ],
-    "/_not-found/page": [
+    "/customer/products/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/customer/products/[id]/page.js"
+    ],
+    "/admin/products/add/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/products/add/page.js"
+    ],
+    "/admin/products/edit/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/products/edit/[id]/page.js"
     ]
   }
 }

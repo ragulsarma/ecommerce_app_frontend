@@ -1,53 +1,68 @@
+
 const BASE_URL = "http://localhost:8000/api/wishlist";
 
 export interface WishlistItem {
-    id: string;
-    productId: string;
     userId: string;
+    user: {
+        id: string;
+        name: string;
+        email: string;
+    };
+    products: {
+        id: string;
+        name: string;
+        price: number;
+    }[];
 }
 
-// Fetch Wishlist Items
-export async function getWishlist(userId: string): Promise<WishlistItem[]> {
+// Fetch wishlist by User ID (Customer)
+export async function getUserWishlist(userId: string): Promise<WishlistItem | null> {
     try {
-        const response = await fetch(`${BASE_URL}/${userId}`, {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        });
-
-        if (!response.ok) {
-            throw new Error(`API Error: ${response.status} - ${response.statusText}`);
-        }
-
+        const response = await fetch(`${BASE_URL}/user/${userId}`, { method: "GET" });
+        if (!response.ok) throw new Error("Failed to fetch wishlist.");
         return response.json();
     } catch (error) {
-        console.error("Error fetching wishlist:", error);
-        throw new Error("Failed to fetch wishlist.");
+        console.error("Error fetching user wishlist:", error);
+        return null;
     }
 }
 
-// Add to Wishlist
+// Add product to wishlist
 export async function addToWishlist(userId: string, productId: string): Promise<void> {
     try {
-        await fetch(`${BASE_URL}`, {
+        const response = await fetch(`${BASE_URL}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userId, productId }),
         });
+        if (!response.ok) throw new Error("Failed to add to wishlist.");
     } catch (error) {
         console.error("Error adding to wishlist:", error);
-        throw new Error("Failed to add to wishlist.");
     }
 }
 
-// Remove from Wishlist
+// Remove product from wishlist (Using DELETE method with body payload)
 export async function removeFromWishlist(userId: string, productId: string): Promise<void> {
     try {
-        await fetch(`${BASE_URL}/${userId}/${productId}`, {
+        const response = await fetch(`${BASE_URL}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId, productId }),
         });
+        if (!response.ok) throw new Error("Failed to remove from wishlist.");
     } catch (error) {
         console.error("Error removing from wishlist:", error);
-        throw new Error("Failed to remove from wishlist.");
+    }
+}
+
+// Fetch all wishlists (Admin)
+export async function getAllWishlists(): Promise<WishlistItem[]> {
+    try {
+        const response = await fetch(`${BASE_URL}`, { method: "GET" });
+        if (!response.ok) throw new Error("Failed to fetch wishlists.");
+        return response.json();
+    } catch (error) {
+        console.error("Error fetching wishlists:", error);
+        throw error;
     }
 }
