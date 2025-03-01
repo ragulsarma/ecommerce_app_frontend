@@ -60,7 +60,7 @@ export default function CustomerHomePage() {
                         <div className="grid grid-cols-3 gap-6">
                             {displayedProducts.map((product) => (
                                 <Link key={product.id} href={`/customer/products/${product.id}`}>
-                                    <div className="border p-4 rounded shadow-md cursor-pointer hover:bg-gray-100">
+                                    <div className="border p-4 rounded shadow-md cursor-pointer hover:bg-gray-100 hover:text-blue-600">
                                         <h2 className="text-lg font-bold">{product.name}</h2>
                                         <p>{product.description}</p>
                                         <p className="font-semibold">${product.price}</p>

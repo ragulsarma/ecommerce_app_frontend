@@ -75,10 +75,10 @@ export default function AdminProducts() {
                 <table className="w-full border-collapse border border-gray-300">
                     <thead className="bg-gray-200">
                         <tr>
-                            <th className="border border-gray-300 p-2">Name</th>
-                            <th className="border border-gray-300 p-2">Price</th>
-                            <th className="border border-gray-300 p-2">Stock</th>
-                            <th className="border border-gray-300 p-2">Actions</th>
+                            <th className="border border-gray-300 p-2 text-blue-600">Name</th>
+                            <th className="border border-gray-300 p-2 text-blue-600">Price</th>
+                            <th className="border border-gray-300 p-2 text-blue-600">Stock</th>
+                            <th className="border border-gray-300 p-2 text-blue-600">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
