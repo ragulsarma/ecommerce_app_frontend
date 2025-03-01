@@ -23,6 +23,13 @@ This is a full-stack **E-Commerce Dashboard** built with **Next.js, React, and T
 
 ---
 
+## 📽️ App Demo
+Below is a recorded demonstration of the app in action:
+
+[🎥 Watch the Video](https://drive.google.com/file/d/1lJ1o8uX6MTjLcpLbzzTvPDtqXfoYfLF0/view?usp=sharing)
+
+---
+
 ## 🛠️ **Installation & Setup**
 
 ### **1️⃣ Clone the repository**
